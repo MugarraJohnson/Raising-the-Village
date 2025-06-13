@@ -1,0 +1,54 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.5">
+  <diagram name="Page-1" id="i8Yse-VK7xzteY3eZRw7">
+    <mxGraphModel dx="1213" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="98LWZISTKMLQ-8sTir8m-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="98LWZISTKMLQ-8sTir8m-1" target="98LWZISTKMLQ-8sTir8m-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-1" value="Field Uploads" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="98LWZISTKMLQ-8sTir8m-4" target="98LWZISTKMLQ-8sTir8m-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-4" value="PostgreSQL Table: field_data_raw" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="200" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="98LWZISTKMLQ-8sTir8m-5" target="98LWZISTKMLQ-8sTir8m-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-5" value="&lt;span style=&quot;background-color: transparent;&quot;&gt;Python ETL Job&lt;/span&gt;&lt;div&gt;&amp;nbsp;- Extract new raw records&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Clean, transform&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- Save to cleaned table&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="310" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-6" value="ETL Trigger" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="260" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="98LWZISTKMLQ-8sTir8m-9" target="98LWZISTKMLQ-8sTir8m-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-9" value="SQL Table: field_data_cleaned / feature_store" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="465" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="98LWZISTKMLQ-8sTir8m-11" target="98LWZISTKMLQ-8sTir8m-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-11" value="Retrain ML Model (Airflow/Python/MLflow)" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="465" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="98LWZISTKMLQ-8sTir8m-15" target="98LWZISTKMLQ-8sTir8m-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-15" value="Predictions Table: household_predictions" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="465" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="98LWZISTKMLQ-8sTir8m-17" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Dashboard: Power BI / Tableau" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="325" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

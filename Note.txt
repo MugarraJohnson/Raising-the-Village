@@ -1,0 +1,2 @@
+predictor.load_model('models/workmate_vulnerability_model.joblib')
+print('Model loaded successfully')
